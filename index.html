@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 Boozt Product Opportunity Playbook</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for smooth transitions (Tailwind's default transition classes are also used) */
+        .section-content {
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+            overflow: hidden;
+        }
+
+        .section-content.open {
+            max-height: 1000px; /* Large enough value to cover content, adjust if sections become extremely long */
+            opacity: 1;
+            margin-top: 1rem; /* Equivalent to mt-4 */
+        }
+
+        .section-toggle-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section-toggle-icon.open {
+            transform: rotate(0deg); /* When open, it's a minus, so no rotation needed if starting as + */
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8 font-sans text-gray-900">
+
+    <header class="mb-10 text-center">
+        <h1 class="text-5xl font-extrabold text-blue-800 leading-tight">
+            <span class="block mb-2">📘 Boozt Product Opportunity</span>
+            <span class="block text-blue-600">Playbook</span>
+        </h1>
+        <p class="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
+            Guiding our journey from ideas to impactful outcomes.
+        </p>
+    </header>
+
+    <div class="max-w-4xl mx-auto">
+
+        <!-- Section 1: Why This Playbook Exists -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    1. 📍 Why This Playbook Exists
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">-</span>
+            </button>
+            <div class="section-content open">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Align on the purpose and value of this playbook.
+                    </p>
+                    <p>
+                        We're moving from a <strong>feature-led, stakeholder-driven model</strong> to an
+                        <strong>outcome-driven, opportunity-led model</strong>. This playbook aligns our teams
+                        around solving <strong>real user problems</strong> with strategic impact — not shipping
+                        someone’s favorite idea.
+                    </p>
+                    <p>
+                        The "Parking Lot → Delivery" model is broken because it often leads to a backlog of
+                        unvalidated ideas, built without a clear understanding of customer needs or business
+                        outcomes. This results in wasted effort, slower time-to-value, and a lack of strategic
+                        alignment. This playbook is a crucial step in Boozt’s ambition to mature product
+                        practices by empowering teams to focus on customer-centric outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Guiding Principles -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    2. 💡 Guiding Principles
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Set the cultural and philosophical foundation.
+                    </p>
+                    <p>
+                        These principles will guide how we operate, collaborate, and make decisions within the
+                        product organization at Boozt:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Start with problems, not solutions:</strong> Our primary focus is
+                            understanding and defining the user or business problem before jumping to any specific
+                            solution.
+                        </li>
+                        <li>
+                            <strong>Discovery is continuous, not a phase:</strong> Product discovery is an ongoing
+                            activity, not a one-off project phase. We continuously learn, test, and iterate.
+                        </li>
+                        <li>
+                            <strong>Empower teams to own the how:</strong> Teams are best positioned to determine
+                            the most effective ways to solve validated problems.
+                        </li>
+                        <li>
+                            <strong>Measure success by outcomes, not outputs:</strong> We define and track success
+                            based on measurable impacts (outcomes) rather than just features shipped (outputs).
+                        </li>
+                        <li>
+                            <strong>Strategy → Opportunity → Discovery → Delivery:</strong> This sequential yet
+                            iterative flow ensures our work is always rooted in strategic intent.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Core Process Overview -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    3. 🔁 Core Process Overview
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Agree on high-level flow and language.
+                    </p>
+                    <p>
+                        Our product development process at Boozt, which we can call "The Boozt Opportunity Flow,"
+                        follows this high-level structure:
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded-md text-sm whitespace-pre-wrap">
+                        <code>
+                            [ Strategic Inputs ]
+                                  ↓
+                            [ Opportunity Backlog ]
+                                  ↓
+                            [ Continuous Discovery ] ←→ [ Continuous Delivery ]
+                                  ↑
+                            [ Feedback & Learning ]
+                        </code>
+                    </pre>
+                    <p>
+                        This model emphasizes a continuous flow of validated opportunities moving from strategic
+                        alignment through discovery and delivery, with constant feedback loops. This granularity
+                        allows for clear understanding without getting bogged down in minutiae.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Opportunity Backlog -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    4. 📌 Opportunity Backlog
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Define what it is, how it works, and who owns it.
+                    </p>
+                    <p>
+                        The <strong>Opportunity Backlog</strong> is a prioritized, transparent list of
+                        well-defined user or business problems that, if solved, would contribute significantly
+                        to our strategic goals. It is fundamentally different from a traditional "Parking Lot"
+                        which often collects unrefined ideas or feature requests.
+                    </p>
+                    <p>
+                        <strong>What qualifies as an Opportunity?</strong> An Opportunity is a clearly
+                        articulated problem statement, validated by evidence, with a clear link to our strategic
+                        objectives. It focuses on <em>what</em> problem to solve, not <em>how</em> to solve it.
+                    </p>
+                    <p>
+                        <strong>How is it different from the Parking Lot?</strong> The Parking Lot is often a
+                        dumping ground for ideas. The Opportunity Backlog is curated, evidence-backed,
+                        strategically aligned, and actively managed. Entries are refined, researched, and
+                        regularly reviewed.
+                    </p>
+                    <p>
+                        <strong>How do we keep it prioritized and visible?</strong> The Head of Product
+                        Management, in collaboration with Product Managers and Product Leadership, owns the
+                        prioritization and visibility of the Opportunity Backlog. It should be maintained in a
+                        shared tool (e.g., Jira, Confluence, Productboard) and regularly reviewed during
+                        Opportunity Review sessions.
+                    </p>
+                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">Template Fields:</h3>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            <strong>Opportunity Name:</strong> A concise, descriptive title for the problem.
+                        </li>
+                        <li>
+                            <strong>Problem Statement:</strong> A clear, user-centric description of the problem
+                            to be solved, including who is affected and the impact. (e.g., "As a [user type], I
+                            want to [goal], but I can't because [pain point], which results in [negative
+                            outcome].")
+                        </li>
+                        <li>
+                            <strong>Strategic Link:</strong> Which Boozt strategic pillar or OKR does this
+                            opportunity directly support?
+                        </li>
+                        <li>
+                            <strong>Source / Evidence:</strong> What data, research, or feedback supports the
+                            existence and importance of this problem? (e.g., "User interviews," "Analytics data,"
+                            "Customer support tickets," "Competitor analysis").
+                        </li>
+                        <li>
+                            <strong>Status:</strong> (e.g., "Identified," "Validated," "In Discovery,"
+                            "Completed," "Archived").
+                        </li>
+                        <li>
+                            <strong>Next Step:</strong> A clear indication of what needs to happen next for this
+                            opportunity.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Pulling Work into Discovery -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    5. 🔍 Pulling Work into Discovery
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Empower teams to pull problems, not receive tasks.
+                    </p>
+                    <p>
+                        Teams are empowered to <strong>pull opportunities</strong> from the Opportunity Backlog
+                        into their continuous discovery process. This ensures ownership, motivation, and a deep
+                        understanding of the problem space. Teams should choose opportunities that align with
+                        their specific domain and expertise, and that they believe they can realistically
+                        impact.
+                    </p>
+                    <p>
+                        <strong>How do teams choose opportunities?</strong> Product Managers, in collaboration
+                        with their design and engineering counterparts, review the prioritized Opportunity
+                        Backlog. They select the next opportunity that best fits their team's capacity,
+                        expertise, and strategic alignment, ensuring they have sufficient evidence to begin
+                        discovery.
+                    </p>
+                    <p>
+                        <strong>What’s the lightweight Discovery template?</strong> The Discovery template
+                        provides a structured approach to exploring an opportunity without being overly
+                        prescriptive. It focuses on documenting learning and validating assumptions.
+                    </p>
+                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                        Boozt Discovery Log Template
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            <strong>Opportunity:</strong> [Link to Opportunity in Backlog]
+                        </li>
+                        <li>
+                            <strong>Team:</strong> [Squad Name]
+                        </li>
+                        <li>
+                            <strong>Discovery Question(s):</strong> What are we trying to learn or validate?
+                        </li>
+                        <li>
+                            <strong>Hypothesis:</strong> What do we believe to be true about the problem/solution?
+                        </li>
+                        <li>
+                            <strong>Discovery Method(s):</strong> How will we test our hypothesis? (e.g., User
+                            Interviews, Surveys, A/B Testing, Prototyping, Data Analysis)
+                        </li>
+                        <li>
+                            <strong>Key Learnings/Insights:</strong> What did we discover?
+                        </li>
+                        <li>
+                            <strong>Evidence:</strong> What data or feedback supports our learnings?
+                        </li>
+                        <li>
+                            <strong>Decision:</strong> What's the next step? (e.g., "Proceed to delivery,"
+                            "Iterate on solution," "Invalidate opportunity," "Pivot")
+                        </li>
+                        <li>
+                            <strong>Date:</strong>
+                        </li>
+                        <li>
+                            <strong>Owner:</strong>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>How do we avoid stage gates?</strong> Discovery is continuous. Instead of formal
+                        stage gates, we encourage frequent, lightweight sharing of insights within the team and
+                        with relevant stakeholders. The "Decision" field in the Discovery Log acts as a
+                        checkpoint, driving towards clarity on the next steps rather than a formal hand-off.
+                    </p>
+                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                        Example Discovery Log:
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            <strong>Opportunity:</strong> Improve conversion rate for first-time mobile app
+                            users.
+                        </li>
+                        <li>
+                            <strong>Team:</strong> Growth Squad
+                        </li>
+                        <li>
+                            <strong>Discovery Question:</strong> What are the main friction points for new users
+                            completing their first purchase on the mobile app?
+                        </li>
+                        <li>
+                            <strong>Hypothesis:</strong> New users abandon the app due to a confusing checkout
+                            flow and lack of trust signals.
+                        </li>
+                        <li>
+                            <strong>Discovery Method(s):</strong> Usability testing with 5 first-time users,
+                            Hotjar recordings analysis, A/B test of simplified checkout form.
+                        </li>
+                        <li>
+                            <strong>Key Learnings/Insights:</strong> Users struggle with creating an account before
+                            checkout. Trust signals (e.g., payment badges) are not prominent enough.
+                        </li>
+                        <li>
+                            <strong>Evidence:</strong> User interview transcripts, heatmaps showing drop-offs, A/B
+                            test results showing 3% higher conversion with guest checkout.
+                        </li>
+                        <li>
+                            <strong>Decision:</strong> Proceed to delivery for an improved guest checkout flow and
+                            more prominent trust badges.
+                        </li>
+                        <li>
+                            <strong>Date:</strong> 2025-08-22
+                        </li>
+                        <li>
+                            <strong>Owner:</strong> Jane Doe (PM)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 6: From Discovery to Delivery -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    6. 🚀 From Discovery to Delivery
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Define when a solution is ready for build.
+                    </p>
+                    <p>
+                        Transitioning from Discovery to Delivery signifies that a solution has been sufficiently
+                        validated and is ready for implementation. This is not a strict gate but a checkpoint
+                        to ensure alignment and reduce risk.
+                    </p>
+                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                        Delivery Readiness Checklist:
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            <strong>Clear validated problem statement:</strong> The core problem being solved is
+                            well-understood and supported by discovery evidence.
+                        </li>
+                        <li>
+                            <strong>Evidence supports solution:</strong> There's enough confidence from discovery
+                            activities (e.g., prototypes, user tests, data analysis) that the proposed solution
+                            addresses the problem effectively.
+                        </li>
+                        <li>
+                            <strong>Technical feasibility understood:</strong> The engineering team has assessed
+                            the technical implications, effort, and potential risks of the solution.
+                        </li>
+                        <li>
+                            <strong>Stakeholders aligned:</strong> Key stakeholders (e.g., business, legal,
+                            marketing) are aware of the proposed solution and its expected impact, and their
+                            feedback has been incorporated where appropriate.
+                        </li>
+                        <li>
+                            <strong>Success metrics defined:</strong> Clear, measurable outcomes and key
+                            performance indicators (KPIs) have been established to track the impact of the
+                            delivered solution.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 7: Feedback & Learning -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    7. 🔁 Feedback & Learning
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Close the loop.
+                    </p>
+                    <p>
+                        Closing the loop on product development is crucial for continuous improvement and
+                        informed strategic adjustments. Learning is a shared responsibility.
+                    </p>
+                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                        How do we capture and share learnings?
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            <strong>Demo Rituals:</strong> Regular product demos (e.g., bi-weekly or monthly) to
+                            relevant stakeholders and other teams to showcase delivered features and share key
+                            learnings from both discovery and delivery.
+                        </li>
+                        <li>
+                            <strong>Opportunity Log:</strong> Updates to the original Opportunity Backlog entry
+                            with actual outcomes, lessons learned, and the ultimate impact (or lack thereof).
+                        </li>
+                        <li>
+                            <strong>Centralized Knowledge Base:</strong> Utilizing tools like Confluence for
+                            documenting discovery insights, research findings, and post-launch analyses.
+                        </li>
+                        <li>
+                            <strong>Product Share-Outs:</strong> Regular sessions (e.g., monthly) where PMs share
+                            their team's key learnings, successes, and challenges with the wider product
+                            organization.
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>What happens to invalidated ideas?</strong> Invalidated ideas are not failures,
+                        but valuable learning opportunities. They are moved to an "Archived" or "Invalidated"
+                        status within the Opportunity Backlog, with a clear note explaining <em>why</em> they
+                        were invalidated and what was learned. This prevents revisiting the same problems
+                        without new evidence and informs future strategic thinking.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 8: Roles & Collaboration -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    8. 🧠 Roles & Collaboration
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Clarify who does what.
+                    </p>
+                    <p>Effective collaboration across roles is vital for the Opportunity Flow.</p>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Stage
+                                    </th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Product Manager
+                                    </th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Designer
+                                    </th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Engineer
+                                    </th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Analyst
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-2 whitespace-nowrap font-medium text-gray-900">
+                                        Strategic Inputs
+                                    </td>
+                                    <td class="px-4 py-2">Defines strategy, OKRs, links to business goals.</td>
+                                    <td class="px-4 py-2">Understands user needs & strategic vision.</td>
+                                    <td class="px-4 py-2">Understands technical constraints & opportunities.</td>
+                                    <td class="px-4 py-2">Provides data to inform strategy & OKRs.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 whitespace-nowrap font-medium text-gray-900">
+                                        Opportunity Backlog
+                                    </td>
+                                    <td class="px-4 py-2">Owns prioritization, problem definition, evidence.</td>
+                                    <td class="px-4 py-2">Provides user insights to enrich opportunities.</td>
+                                    <td class="px-4 py-2">
+                                        Assesses technical feasibility & complexity (high-level).
+                                    </td>
+                                    <td class="px-4 py-2">Quantifies problem impact, gathers relevant data.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 whitespace-nowrap font-medium text-gray-900">
+                                        Continuous Discovery
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        Leads discovery, defines hypotheses, synthesizes insights.
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        Designs tests, prototypes, conducts user research.
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        Advises on technical feasibility, rapid prototyping.
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        Sets up tracking, analyzes experiment data, validates hypotheses.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 whitespace-nowrap font-medium text-gray-900">
+                                        Continuous Delivery
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        Defines success metrics, manages backlog, stakeholder comms.
+                                    </td>
+                                    <td class="px-4 py-2">Ensures UX quality, conducts design reviews.</td>
+                                    <td class="px-4 py-2">Builds, tests, deploys solutions, ensures quality.</td>
+                                    <td class="px-4 py-2">
+                                        Monitors post-launch performance, reports on outcomes.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 whitespace-nowrap font-medium text-gray-900">
+                                        Feedback & Learning
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        Communicates outcomes, updates backlog, shares learnings.
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        Gathers user feedback, identifies new opportunities.
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        Provides technical insights, identifies tech debt.
+                                    </td>
+                                    <td class="px-4 py-2">Analyzes impact, identifies trends, informs next steps.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 9: Product Leadership & Governance -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    9. 🧭 Product Leadership & Governance
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Define how leaders support without controlling.
+                    </p>
+                    <p>
+                        Product leadership's role is to enable, coach, and provide strategic guidance, rather
+                        than micro-managing or dictating solutions.
+                    </p>
+                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                        How do leaders review and refine the backlog?
+                    </h3>
+                    <p>
+                        Product leaders facilitate a <strong>Monthly/Quarterly Opportunity Review</strong>. This
+                        session focuses on:
+                    </p>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            <strong>Strategic Alignment:</strong> Ensuring opportunities still align with
+                            overarching company strategy and OKRs.
+                        </li>
+                        <li>
+                            <strong>Prioritization:</strong> Reviewing the health and prioritization of the
+                            overall Opportunity Backlog, identifying any significant gaps or shifts.
+                        </li>
+                        <li>
+                            <strong>Guidance:</strong> Providing feedback and guidance on problem definitions,
+                            evidence, and potential strategic implications.
+                        </li>
+                        <li>
+                            <strong>Resource Allocation:</strong> Ensuring teams have the necessary resources for
+                            discovery and delivery.
+                        </li>
+                    </ul>
+                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                        Leadership as coaches, not gatekeepers:
+                    </h3>
+                    <p>
+                        Product leadership acts as <strong>coaches</strong>, offering expertise, challenging
+                        assumptions, and guiding teams towards better outcomes. They foster a culture of
+                        learning and experimentation, intervening only when strategic misalignment or
+                        significant risks are identified, always encouraging team autonomy in <em>how</em> they
+                        solve problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 10: Templates & Toolkits -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    10. 📁 Templates & Toolkits
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Collect all tools in one place.
+                    </p>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            <strong>Opportunity Template:</strong> (As defined in Section 4)
+                        </li>
+                        <li>
+                            <strong>Discovery Template:</strong> (Boozt Discovery Log, as defined in Section 5)
+                        </li>
+                        <li>
+                            <strong>Delivery Checklist:</strong> (As defined in Section 6)
+                        </li>
+                        <li>
+                            <strong>Decision Tracker:</strong> A simple log to record key product decisions, their
+                            rationale, and the date.
+                        </li>
+                        <li>
+                            <strong>Jira/Confluence Links:</strong>
+                            <ul class="list-disc pl-5">
+                                <li>[Link to Boozt Jira Board for Opportunity Backlog]</li>
+                                <li>[Link to Boozt Confluence Space for Discovery Logs and Research]</li>
+                                <li>[Link to Boozt Product Strategy Document]</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 11: FAQ & Edge Cases -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    11. 🧩 FAQ & Edge Cases
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Prepare for common “what ifs.”
+                    </p>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            <strong>What if a team doesn’t want to pull anything?</strong>
+                            <ul class="list-disc pl-5">
+                                <li>
+                                    <strong>Response:</strong> This suggests a potential issue with understanding the
+                                    process, team motivation, or clarity of the Opportunity Backlog. Leadership should
+                                    engage the team to understand the root cause, provide coaching, or refine
+                                    opportunities. It might also indicate a need for more strategic guidance or
+                                    team-specific opportunities.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>What if all ideas are invalidated?</strong>
+                            <ul class="list-disc pl-5">
+                                <li>
+                                    <strong>Response:</strong> While rare, this signifies strong learning! It means
+                                    the hypotheses were incorrect, or the problems weren't as impactful as initially
+                                    thought. This feedback is invaluable. Leaders should commend the team for their
+                                    rigorous discovery and use these learnings to inform new strategic inputs or pivot
+                                    to different opportunities. It avoids building the wrong thing.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>What if a stakeholder pushes a pet feature?</strong>
+                            <ul class="list-disc pl-5">
+                                <li>
+                                    <strong>Response:</strong> This is where the playbook's principles are crucial.
+                                    Politically redirect the stakeholder to the Opportunity Backlog and the
+                                    problem-first approach. Ask them: "What problem is this feature solving, and what
+                                    evidence supports its importance?" Offer to help them articulate the problem as an
+                                    opportunity, which can then be prioritized and enter the discovery flow. Emphasize
+                                    that we ship outcomes, not just features.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 12: Getting Started -->
+        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
+                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
+                    12. 🚀 Getting Started
+                </h2>
+                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+            </button>
+            <div class="section-content">
+                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
+                    <p>
+                        <strong>Goal:</strong> Plan rollout & pilot.
+                    </p>
+                    <p>
+                        Implementing "The Boozt Opportunity Flow" will be a phased approach to ensure smooth
+                        adoption and continuous improvement.
+                    </p>
+                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                        Which squad(s) will pilot?
+                    </h3>
+                    <p>
+                        We will identify 1-2 volunteer squads initially to pilot this playbook. These squads
+                        should be keen on adopting new ways of working and provide constructive feedback.
+                    </p>
+                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                        How do we onboard teams?
+                    </h3>
+                    <p>
+                        Onboarding will involve a combination of structured sessions and ongoing support:
+                    </p>
+                    <ol class="list-decimal pl-5">
+                        <li>
+                            <strong>Walkthrough Session:</strong> A comprehensive session for pilot squads and
+                            relevant stakeholders to introduce the playbook, its principles, and core processes.
+                        </li>
+                        <li>
+                            <strong>First Opportunity Review:</strong> Facilitate the pilot squad's first "pull"
+                            from the Opportunity Backlog and guide them through defining their initial discovery
+                            questions.
+                        </li>
+                        <li>
+                            <strong>Retro after 4 weeks:</strong> A dedicated retrospective session with pilot
+                            squads to gather feedback on what's working, what's challenging, and how to improve
+                            the playbook.
+                        </li>
+                        <li>
+                            <strong>Gather adoption feedback:</strong> Continuously collect feedback from pilot
+                            teams and leadership to iterate on the playbook before a wider rollout.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sectionButtons = document.querySelectorAll('.section-button');
+
+            sectionButtons.forEach(button => {
+                const content = button.nextElementSibling; // The div.section-content
+                const icon = button.querySelector('.section-toggle-icon');
+
+                // Set initial state for non-defaultOpen sections (closed)
+                if (!content.classList.contains('open')) {
+                    content.style.maxHeight = '0px'; // Explicitly set to 0 for transition
+                    content.style.opacity = '0'; // Explicitly set to 0 for transition
+                    icon.textContent = '+';
+                } else {
+                    // For defaultOpen sections, ensure max-height is set correctly on load
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.textContent = '-';
+                }
+
+                button.addEventListener('click', () => {
+                    content.classList.toggle('open');
+                    icon.classList.toggle('open');
+
+                    if (content.classList.contains('open')) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.style.opacity = '1';
+                        icon.textContent = '-';
+                    } else {
+                        content.style.maxHeight = '0px';
+                        content.style.opacity = '0';
+                        icon.textContent = '+';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

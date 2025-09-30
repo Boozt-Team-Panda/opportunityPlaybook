@@ -4,10 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📘 Boozt Product Opportunity Playbook</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <style>
-        /* Custom styles for smooth transitions (Tailwind's default transition classes are also used) */
+        /* Import Suisse Int'l font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            /* Spacing Tokens */
+            --spacing-xs: 4px;
+            --spacing-s: 8px;
+            --spacing-m: 16px;
+            --spacing-l: 24px;
+            
+            /* Color Tokens - Neutral */
+            --color-neutral-white: #ffffff;
+            --color-neutral-black: #121212;
+            --color-neutral-gray-50: #f5f5f5;
+            --color-neutral-gray-100: #e5e5e8;
+            --color-neutral-gray-200: #bbbbbb;
+            --color-neutral-gray-300: #adaeb3;
+            --color-neutral-gray-600: #4c4d52;
+            --color-neutral-gray-800: #2a252c;
+            
+            /* Color Tokens - Brand Boozt */
+            --color-brand-boozt-50: #fbf6f1;
+            --color-brand-boozt-100: #eae4dc;
+            --color-brand-boozt-500: #4c4d52;
+            --color-brand-boozt-700: #302a32;
+            --color-brand-boozt-900: #241d26;
+            
+            /* Color Tokens - Brand BooztPay */
+            --color-brand-booztpay-500: #407d6e;
+            --color-brand-booztpay-700: #366a5d;
+            --color-brand-booztpay-900: #24473e;
+            
+            /* Color Tokens - Brand Booztlet */
+            --color-brand-booztlet-50: #121212;
+            --color-brand-booztlet-500: #00c799;
+            --color-brand-booztlet-700: #00dba8;
+            
+            /* Semantic Colors */
+            --color-primary: #241d26;
+            --color-on-primary: #fbf6f1;
+            --color-surface: #ffffff;
+            --color-on-surface: #121212;
+            --color-surface-variant: #f5f5f5;
+            --color-on-surface-variant: #4c4d52;
+            --color-outline: #adaeb3;
+            --color-outline-variant: #e5e5e8;
+            --color-background: #ffffff;
+            --color-on-background: #121212;
+            --color-info: #407d6e;
+            --color-on-info: #ffffff;
+            --color-info-container: #fbf6f1;
+            --color-on-info-container: #407d6e;
+            
+            /* Border Radius Tokens */
+            --corner-radius-sharp: 0;
+            --corner-radius-small: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Suisse Int\'l', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-on-background);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: var(--spacing-l);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Custom styles for smooth transitions */
         .section-content {
             max-height: 0;
             opacity: 0;
@@ -18,7 +96,7 @@
         .section-content.open {
             max-height: 1000px; /* Large enough value to cover content, adjust if sections become extremely long */
             opacity: 1;
-            margin-top: 1rem; /* Equivalent to mt-4 */
+            margin-top: var(--spacing-m);
         }
 
         .section-toggle-icon {
@@ -30,44 +108,44 @@
         }
     </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8 font-sans text-gray-900">
+<body>
 
-    <header class="mb-10 text-center">
-        <h1 class="text-5xl font-extrabold text-blue-800 leading-tight">
-            <span class="block mb-2">📘 Boozt Product Opportunity</span>
-            <span class="block text-blue-600">Playbook</span>
-        </h1>
-        <p class="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
-            Guiding our journey from ideas to impactful outcomes.
-        </p>
-    </header>
-
-    <div class="max-w-4xl mx-auto">
+    <div class="container">
+        <header style="text-align: center; margin-bottom: var(--spacing-l); padding-bottom: var(--spacing-l); border-bottom: 1px solid var(--color-outline-variant);">
+            <h1 style="font-size: 32px; font-weight: 500; color: var(--color-primary); margin-bottom: var(--spacing-s); line-height: 1.2;">
+                <span style="display: block; margin-bottom: var(--spacing-s);">📘 Boozt Product Opportunity</span>
+                <span style="display: block; color: var(--color-info);">Playbook</span>
+            </h1>
+            <p style="font-size: 15px; color: var(--color-on-surface-variant); max-width: 600px; margin: 0 auto;">
+                Guiding our journey from ideas to impactful outcomes.
+            </p>
+        </header>
 
         <!-- Section 1: Why This Playbook Exists -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    1. 📍 Why This Playbook Exists
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="map-pin" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    1. Why This Playbook Exists
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">-</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">-</span>
             </button>
             <div class="section-content open">
-                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
-                    <p>
+                <div style="padding-top: var(--spacing-s); color: var(--color-on-surface); line-height: 1.6;">
+                    <p style="margin-bottom: var(--spacing-m);">
                         <strong>Goal:</strong> Align on the purpose and value of this playbook.
                     </p>
-                    <p>
+                    <p style="margin-bottom: var(--spacing-m);">
                         We're moving from a <strong>feature-led, stakeholder-driven model</strong> to an
                         <strong>outcome-driven, opportunity-led model</strong>. This playbook aligns our teams
                         around solving <strong>real user problems</strong> with strategic impact — not shipping
-                        someone’s favorite idea.
+                        someone's favorite idea.
                     </p>
-                    <p>
+                    <p style="margin-bottom: var(--spacing-m);">
                         The "Parking Lot → Delivery" model is broken because it often leads to a backlog of
                         unvalidated ideas, built without a clear understanding of customer needs or business
                         outcomes. This results in wasted effort, slower time-to-value, and a lack of strategic
-                        alignment. This playbook is a crucial step in Boozt’s ambition to mature product
+                        alignment. This playbook is a crucial step in Boozt's ambition to mature product
                         practices by empowering teams to focus on customer-centric outcomes.
                     </p>
                 </div>
@@ -75,41 +153,42 @@
         </div>
 
         <!-- Section 2: Guiding Principles -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    2. 💡 Guiding Principles
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="lightbulb" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    2. Guiding Principles
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
-                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
-                    <p>
+                <div style="padding-top: var(--spacing-s); color: var(--color-on-surface); line-height: 1.6;">
+                    <p style="margin-bottom: var(--spacing-m);">
                         <strong>Goal:</strong> Set the cultural and philosophical foundation.
                     </p>
-                    <p>
+                    <p style="margin-bottom: var(--spacing-m);">
                         These principles will guide how we operate, collaborate, and make decisions within the
                         product organization at Boozt:
                     </p>
-                    <ul>
-                        <li>
+                    <ul style="margin-left: var(--spacing-m); margin-bottom: var(--spacing-m);">
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Start with problems, not solutions:</strong> Our primary focus is
                             understanding and defining the user or business problem before jumping to any specific
                             solution.
                         </li>
-                        <li>
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Discovery is continuous, not a phase:</strong> Product discovery is an ongoing
                             activity, not a one-off project phase. We continuously learn, test, and iterate.
                         </li>
-                        <li>
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Empower teams to own the how:</strong> Teams are best positioned to determine
                             the most effective ways to solve validated problems.
                         </li>
-                        <li>
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Measure success by outcomes, not outputs:</strong> We define and track success
                             based on measurable impacts (outcomes) rather than just features shipped (outputs).
                         </li>
-                        <li>
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Strategy → Opportunity → Discovery → Delivery:</strong> This sequential yet
                             iterative flow ensures our work is always rooted in strategic intent.
                         </li>
@@ -119,23 +198,24 @@
         </div>
 
         <!-- Section 3: Core Process Overview -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    3. 🔁 Core Process Overview
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="refresh-cw" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    3. Core Process Overview
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
-                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
-                    <p>
+                <div style="padding-top: var(--spacing-s); color: var(--color-on-surface); line-height: 1.6;">
+                    <p style="margin-bottom: var(--spacing-m);">
                         <strong>Goal:</strong> Agree on high-level flow and language.
                     </p>
-                    <p>
+                    <p style="margin-bottom: var(--spacing-m);">
                         Our product development process at Boozt, which we can call "The Boozt Opportunity Flow,"
                         follows this high-level structure:
                     </p>
-                    <pre class="bg-gray-100 p-4 rounded-md text-sm whitespace-pre-wrap">
+                    <pre style="background-color: var(--color-surface-variant); padding: var(--spacing-m); border-radius: var(--corner-radius-small); font-size: 13px; white-space: pre-wrap; margin-bottom: var(--spacing-m); color: var(--color-on-surface);">
                         <code>
                             [ Strategic Inputs ]
                                   ↓
@@ -146,7 +226,7 @@
                             [ Feedback & Learning ]
                         </code>
                     </pre>
-                    <p>
+                    <p style="margin-bottom: var(--spacing-m);">
                         This model emphasizes a continuous flow of validated opportunities moving from strategic
                         alignment through discovery and delivery, with constant feedback loops. This granularity
                         allows for clear understanding without getting bogged down in minutiae.
@@ -156,67 +236,68 @@
         </div>
 
         <!-- Section 4: Opportunity Backlog -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    4. 📌 Opportunity Backlog
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="pin" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    4. Opportunity Backlog
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
-                <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
-                    <p>
+                <div style="padding-top: var(--spacing-s); color: var(--color-on-surface); line-height: 1.6;">
+                    <p style="margin-bottom: var(--spacing-m);">
                         <strong>Goal:</strong> Define what it is, how it works, and who owns it.
                     </p>
-                    <p>
+                    <p style="margin-bottom: var(--spacing-m);">
                         The <strong>Opportunity Backlog</strong> is a prioritized, transparent list of
                         well-defined user or business problems that, if solved, would contribute significantly
                         to our strategic goals. It is fundamentally different from a traditional "Parking Lot"
                         which often collects unrefined ideas or feature requests.
                     </p>
-                    <p>
+                    <p style="margin-bottom: var(--spacing-m);">
                         <strong>What qualifies as an Opportunity?</strong> An Opportunity is a clearly
                         articulated problem statement, validated by evidence, with a clear link to our strategic
                         objectives. It focuses on <em>what</em> problem to solve, not <em>how</em> to solve it.
                     </p>
-                    <p>
+                    <p style="margin-bottom: var(--spacing-m);">
                         <strong>How is it different from the Parking Lot?</strong> The Parking Lot is often a
                         dumping ground for ideas. The Opportunity Backlog is curated, evidence-backed,
                         strategically aligned, and actively managed. Entries are refined, researched, and
                         regularly reviewed.
                     </p>
-                    <p>
+                    <p style="margin-bottom: var(--spacing-m);">
                         <strong>How do we keep it prioritized and visible?</strong> The Head of Product
                         Management, in collaboration with Product Managers and Product Leadership, owns the
                         prioritization and visibility of the Opportunity Backlog. It should be maintained in a
                         shared tool (e.g., Jira, Confluence, Productboard) and regularly reviewed during
                         Opportunity Review sessions.
                     </p>
-                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">Template Fields:</h3>
-                    <ul class="list-disc pl-5">
-                        <li>
+                    <h3 style="font-size: 18px; font-weight: 500; color: var(--color-primary); margin-top: var(--spacing-m); margin-bottom: var(--spacing-s);">Template Fields:</h3>
+                    <ul style="margin-left: var(--spacing-m); margin-bottom: var(--spacing-m);">
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Opportunity Name:</strong> A concise, descriptive title for the problem.
                         </li>
-                        <li>
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Problem Statement:</strong> A clear, user-centric description of the problem
                             to be solved, including who is affected and the impact. (e.g., "As a [user type], I
                             want to [goal], but I can't because [pain point], which results in [negative
                             outcome].")
                         </li>
-                        <li>
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Strategic Link:</strong> Which Boozt strategic pillar or OKR does this
                             opportunity directly support?
                         </li>
-                        <li>
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Source / Evidence:</strong> What data, research, or feedback supports the
                             existence and importance of this problem? (e.g., "User interviews," "Analytics data,"
                             "Customer support tickets," "Competitor analysis").
                         </li>
-                        <li>
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Status:</strong> (e.g., "Identified," "Validated," "In Discovery,"
                             "Completed," "Archived").
                         </li>
-                        <li>
+                        <li style="margin-bottom: var(--spacing-s);">
                             <strong>Next Step:</strong> A clear indication of what needs to happen next for this
                             opportunity.
                         </li>
@@ -226,12 +307,13 @@
         </div>
 
         <!-- Section 5: Pulling Work into Discovery -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    5. 🔍 Pulling Work into Discovery
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="search" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    5. Pulling Work into Discovery
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
                 <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
@@ -347,12 +429,13 @@
         </div>
 
         <!-- Section 6: From Discovery to Delivery -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    6. 🚀 From Discovery to Delivery
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="rocket" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    6. From Discovery to Delivery
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
                 <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
@@ -397,12 +480,13 @@
         </div>
 
         <!-- Section 7: Feedback & Learning -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    7. 🔁 Feedback & Learning
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="rotate-ccw" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    7. Feedback & Learning
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
                 <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
@@ -448,12 +532,13 @@
         </div>
 
         <!-- Section 8: Roles & Collaboration -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    8. 🧠 Roles & Collaboration
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="users" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    8. Roles & Collaboration
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
                 <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
@@ -556,12 +641,13 @@
         </div>
 
         <!-- Section 9: Product Leadership & Governance -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    9. 🧭 Product Leadership & Governance
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="compass" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    9. Product Leadership & Governance
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
                 <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
@@ -612,12 +698,13 @@
         </div>
 
         <!-- Section 10: Templates & Toolkits -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    10. 📁 Templates & Toolkits
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="folder" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    10. Templates & Toolkits
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
                 <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
@@ -652,12 +739,13 @@
         </div>
 
         <!-- Section 11: FAQ & Edge Cases -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    11. 🧩 FAQ & Edge Cases
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="help-circle" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    11. FAQ & Edge Cases
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
                 <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
@@ -708,12 +796,13 @@
         </div>
 
         <!-- Section 12: Getting Started -->
-        <div class="mb-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <button class="section-button w-full flex justify-between items-center text-left focus:outline-none">
-                <h2 class="text-2xl font-semibold text-gray-800 flex-grow pr-4">
-                    12. 🚀 Getting Started
+        <div style="margin-bottom: var(--spacing-l); background-color: var(--color-surface); padding: var(--spacing-l); border-radius: var(--corner-radius-small); border: 1px solid var(--color-outline-variant);">
+            <button class="section-button" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0;">
+                <h2 style="font-size: 20px; font-weight: 500; color: var(--color-primary); flex-grow: 1; padding-right: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-s);">
+                    <i data-lucide="play" style="width: 20px; height: 20px; color: var(--color-info);"></i>
+                    12. Getting Started
                 </h2>
-                <span class="section-toggle-icon text-gray-500 text-3xl">+</span>
+                <span class="section-toggle-icon" style="color: var(--color-on-surface-variant); font-size: 24px;">+</span>
             </button>
             <div class="section-content">
                 <div class="pt-2 text-gray-700 leading-relaxed prose max-w-none">
@@ -765,6 +854,11 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
             const sectionButtons = document.querySelectorAll('.section-button');
 
             sectionButtons.forEach(button => {

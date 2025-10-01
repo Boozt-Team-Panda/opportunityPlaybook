@@ -85,8 +85,8 @@ Teams are empowered to **pull opportunities** from the Opportunity Backlog into 
 ### Example Discovery Log:
 
 - **Opportunity:** Improve conversion rate for first-time mobile app users.
-- **Team:** Growth Squad
-- **Discovery Question:** What are the main friction points for new users completing their first purchase on the mobile app?
+- **Team:** Account Squad
+- **Discovery Question:** What are the main friction points for new users completing their first purchase on mobile app?
 - **Hypothesis:** New users abandon the app due to a confusing checkout flow and lack of trust signals.
 - **Discovery Method(s):** Usability testing with 5 first-time users, Hotjar recordings analysis, A/B test of simplified checkout form.
 - **Key Learnings/Insights:** Users struggle with creating an account before checkout. Trust signals (e.g., payment badges) are not prominent enough.

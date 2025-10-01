@@ -1,7 +1,3 @@
-# Boozt Product Opportunity Playbook
-
-Guiding our journey from ideas to impactful outcomes.
-
 ## 1. Why This Playbook Exists
 
 **Goal:** Align on the purpose and value of this playbook.
